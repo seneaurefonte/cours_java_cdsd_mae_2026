@@ -72,6 +72,27 @@ public class HelloWord {
                         }
 
                     // Type de Reference( String, Integer, Short, Long, Double, Float, Character, Boolean) ==>Tableau de Reference
+                         Personne [] tableauPersonnes;
+                         tableauPersonnes = new Personne[3]; //[null, null, null] (Valeur par défaut des éléments du tableau)
+                        //indexdex                 
+                         //Reference            0     1     2.            
+                         // tableauPersonnes ==> [null, null,null]
+                         //null ==> absence de valeur                             Zone Reference           Zone de Valeurs 
+                         var pers = new Personne("Doe", "John");     //pers ==>[4F5]           4F5 ==>[Doe, John]    
+                         tableauPersonnes[0] = pers;  // tableauPersonnes ==> [4F5, null,null]
+                         tableauPersonnes[1] = new Personne("Smith", "Jane");   // tableauPersonnes ==> [4F5, 4F6,null].  4F6 ==>[Smith, Jane]
+         
+                        //Parcourir un tableau
+                        for (int i = 0; i < 2; i++) {
+                            //Affiche l'adresse de la zone de référence (4F5, 4F6) et non les valeurs (Doe, John) et (Smith, Jane)
+                            System.out.println(tableauPersonnes[i]);
+
+                            //Pour afficher les valeurs (Doe, John) et (Smith, Jane),
+                            // 1- il faut utiliser la méthode toString() de la classe Personne
+                             // System.out.println(tableauPersonnes[i].toString());
+                            //2- ou accéder directement aux attributs de la classe Personne
+                             System.out.println(tableauPersonnes[i].getNom() + " " + tableauPersonnes[i].getPrenom());
+                        }
                      
         }
     
