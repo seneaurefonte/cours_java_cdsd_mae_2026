@@ -1,5 +1,17 @@
 
 
+
+/*
+                                   Reference.                Valeurs
+  String nom1;                     nom1==>|  |.               4F6
+    nom1=new String("Wane");       nom1==>|4F6|              |Wane|
+                                                              4F7
+  String nom2=new String("Wane");  nom2==>|4F7|              |Wane|
+    nom1==nom2                       ==> 4F6==4F7   ==> Faux
+    nom1.equals(nom2)               "Wane"=="Wane"  ==True
+
+
+*/
 public class Personne {
    private String nom;
    private String prenom; 
@@ -30,9 +42,9 @@ public class Personne {
      this.prenom = prenom;
     }
 
-  /* public String toString() {
+   public String toString() {
         return "Nom='" + this.nom  +", Prenom=" + this.prenom ;
     }
-   */
+   
 
 }

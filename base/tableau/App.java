@@ -23,7 +23,15 @@ public class App {
                     TableauView.afficherTableauInt(tableauInt, nbreElements);
                     break;
                 case 3:
-                    System.out.println("Au revoir!");
+                       tableauInt=TableauService.getTabPairs();
+                      int nbreValPairs=TableauService.getNbreValPairs();
+                       TableauView.afficherTableauInt(tableauInt, nbreValPairs);
+                    break;
+
+                case 4:
+                         var tableauSorted=TableauService.getTabSorted();
+                         nbreElements = TableauService.getNbreElements();
+                         TableauView.afficherTableauInt(tableauSorted, nbreElements);
                     break;
             
                 default:
