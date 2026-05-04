@@ -9,8 +9,6 @@
   String nom2=new String("Wane");  nom2==>|4F7|              |Wane|
     nom1==nom2                       ==> 4F6==4F7   ==> Faux
     nom1.equals(nom2)               "Wane"=="Wane"  ==True
-
-
 */
 public class Personne {
    private String nom;
